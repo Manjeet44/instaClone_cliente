@@ -20,7 +20,8 @@ export default function App() {
   }, []);
 
   const logout = () => {
-    console.log('cerrar Sesion')
+    localStorage.removeItem('token');
+    setAuth(null);
   }
 
   const setUser = (user) => {
