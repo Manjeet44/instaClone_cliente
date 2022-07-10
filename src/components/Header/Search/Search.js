@@ -12,7 +12,6 @@ export default function Search() {
     const {data, loading} = useQuery(SEARCH, {
         variables: {search}
     });
-    console.log(result)
     
     useEffect(() => {
         if(data?.search.length > 0) {

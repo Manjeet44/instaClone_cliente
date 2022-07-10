@@ -8,7 +8,7 @@ import ModalBasic from '../../Modal/ModalBasic/ModalBasic';
 import AvatarForm from '../AvatarForm/AvatarForm';
 import HeaderProfile from './HeaderProfile/HeaderProfile';
 import SettingsForm from '../SettingsForm/SettingsForm';
-
+import Followers from './Followers/Followers';
 import './Profile.scss';
 
 //Images
@@ -64,8 +64,8 @@ export default function Profile({username}) {
         </Grid.Column>
 
         <Grid.Column width={11} className="profile__right">
-          <HeaderProfile username={username} auth={auth} handleModal={handleModal} />
-          <div>Followers</div>
+          <HeaderProfile username={username} getUser={getUser} auth={auth} handleModal={handleModal} />
+          <Followers username={username} />
           <div className='other'>
             <p className='name'>{getUser.name}</p>
             {getUser.siteWeb && (
