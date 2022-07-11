@@ -6,7 +6,7 @@ import ModalBasic from '../../../Modal/ModalBasic/ModalBasic';
 import ListUsers from '../../ListUsers/ListUsers';
 import './Followers.scss';
 
-export default function Followers({username}) {
+export default function Followers({username, totalPublications}) {
 
   const [showModal, setShowModal] = useState(false);
   const [titleModal, setTitleModal] = useState('');
@@ -56,7 +56,7 @@ export default function Followers({username}) {
   return (
     <>
       <div className='followers'>
-          <p><span>**</span> Publicaciones</p>
+          <p><span>{totalPublications}</span> Publicaciones</p>
           <p className='link' onClick={openFollowers}><span>{seguidores}</span> Seguidores</p>
           <p className='link' onClick={openFolloweds}><span>{seguidos}</span> Seguidos</p>
       </div>

@@ -14,7 +14,7 @@ import './Profile.scss';
 //Images
 import ImageNoFound from '../../../assets/png/avatar.png';
 
-export default function Profile({username}) {
+export default function Profile({username, totalPublications}) {
   const [showModal, setShowModal] = useState(false);
   const [titleModal, setTitleModal] = useState('');
   const [childrenModal, setChildrenModal] = useState(null);
@@ -65,7 +65,7 @@ export default function Profile({username}) {
 
         <Grid.Column width={11} className="profile__right">
           <HeaderProfile username={username} getUser={getUser} auth={auth} handleModal={handleModal} />
-          <Followers username={username} />
+          <Followers username={username} totalPublications={totalPublications} />
           <div className='other'>
             <p className='name'>{getUser.name}</p>
             {getUser.siteWeb && (
