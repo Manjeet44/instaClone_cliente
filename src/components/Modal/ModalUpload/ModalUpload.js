@@ -18,7 +18,6 @@ export default function ModalUpload({show, setShow}) {
             file,
             preview: URL.createObjectURL(file)
         });
-        console.log(file)
     });
 
     const {getRootProps, getInputProps} = useDropzone({
