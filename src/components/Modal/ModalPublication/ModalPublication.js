@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Grid } from 'semantic-ui-react';
 import CommentForm from './CommentForm/CommentForm';
 import Comments from './Comments/Comments';
+import Actions from './Actions/Actions';
 import './ModalPublication.scss';
 
 export default function ModalPublication({show, setShow, publication}) {
@@ -12,7 +13,7 @@ export default function ModalPublication({show, setShow, publication}) {
             <Grid.Column className='modal-publication__left' width={10} style={{backgroundImage: `url("${publication.file}")`}} />
             <Grid.Column className='modal-publication__right' width={6}>
                 <Comments publication={publication} />
-                <div>Actions</div>
+                <Actions publication={publication} />
                 <CommentForm publication={publication} />
             </Grid.Column>
         </Grid>
